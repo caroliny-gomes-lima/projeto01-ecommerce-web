@@ -6,7 +6,7 @@
                 <a href="#">Ver mais</a>
             </div>
 
-            <div id="carousel-cards" class="carousel slide" data-bs-ride="carousel">
+            <div id="{{CAROUSEL_ID}}" class="carousel slide" data-bs-ride="carousel">
                 <div id="carousel-inner" class="carousel-inner">
                     <!-- Slides -->
                     <!-- Card -->
@@ -14,23 +14,23 @@
 
                 <!-- Controles -->
                 <button class="carousel-control-prev custom-carousel-btn d-none d-lg-flex" type="button"
-                    data-bs-target="#carousel-cards" data-bs-slide="prev">
+                    data-bs-target="#{{CAROUSEL_ID}}" data-bs-slide="prev">
                     <i class="bi bi-arrow-left"></i>
                 </button>
                 <button class="carousel-control-next custom-carousel-btn d-none d-lg-flex" type="button"
-                    data-bs-target="#carousel-cards" data-bs-slide="next">
+                    data-bs-target="#{{CAROUSEL_ID}}" data-bs-slide="next">
                     <i class="bi bi-arrow-right"></i>
                 </button>
             </div>
 
             <!-- Indicadores FORA do #carousel-cards -->
             <div id="first-carousel-indicators" class="carousel-indicators-container">
-                <button type="button" data-bs-target="#carousel-cards" data-bs-slide-to="0" class="active"
+                <button type="button" data-bs-target="#{{CAROUSEL_ID}}" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 0" />
 
-                <button type="button" data-bs-target="#carousel-cards" data-bs-slide-to="1" aria-label="Slide 1" />
+                <button type="button" data-bs-target="#{{CAROUSEL_ID}}" data-bs-slide-to="1" aria-label="Slide 1" />
 
-                <button type="button" data-bs-target="#carousel-cards" data-bs-slide-to="2" aria-label="Slide 2" />
+                <button type="button" data-bs-target="#{{CAROUSEL_ID}}" data-bs-slide-to="2" aria-label="Slide 2" />
             </div>
         </div>
     </div>

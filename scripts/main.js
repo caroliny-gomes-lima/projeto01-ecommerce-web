@@ -3,10 +3,21 @@ async function LoadComponents(id, htmlPath, cssPath) {
     fetch(htmlPath),
     fetch(cssPath),
   ]);
-  const html = await htmlResponse.text();
-  const css = await cssResponse.text();
+  let html = await htmlResponse.text();
+  let css = await cssResponse.text();
 
   const container = document.getElementById(id);
+
+  if (id === "first-carousel") {
+    html = html
+      .replace(/{{CAROUSEL_ID}}/g, "carousel-cards-1")
+      .replace(/{{CAROUSEL_INNER_ID}}/g, "carousel-inner-1");
+  } else if (id === "second-carousel") {
+    html = html
+      .replace(/{{CAROUSEL_ID}}/g, "carousel-cards-2")
+      .replace(/{{CAROUSEL_INNER_ID}}/g, "carousel-inner-2");
+  }
+
   container.innerHTML = html;
 
   const style = document.createElement("style");
@@ -53,11 +64,6 @@ async function LoadComponents(id, htmlPath, cssPath) {
       });
     }, 0);
   }
-
-  if (id === "first-carousel" && id === "second-carousel") {
-    createCarousel();
-  }
-
   return true;
 }
 
